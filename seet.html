@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎟️ Seet Selection</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎟️ Seet Selection</h1>
+
+    <label for="memberSelect" class="label">Select Your Name:</label>
+    <select id="memberSelect" class="dropdown">
+      <option value="">-- Select Member --</option>
+    </select>
+
+    <div id="seetContainer" class="grid"></div>
+    <div id="resultArea"></div>
+
+    <hr class="divider">
+
+    <h2>📋 Member List</h2>
+    <div id="memberStatus" class="status"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

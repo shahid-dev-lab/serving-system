@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Members - Seet System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👥 Add Members</h1>
+
+    <form id="memberForm" class="member-form">
+      <input type="text" id="memberName" placeholder="Enter member name" required>
+      <button type="submit">Add Member</button>
+    </form>
+
+    <div id="memberList" class="member-list"></div>
+
+    <button id="nextBtn" class="next-btn">➡️ Go to Seet Page</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

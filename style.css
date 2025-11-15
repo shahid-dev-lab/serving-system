@@ -1,0 +1,360 @@
+/* ==================== GLOBAL STYLES ==================== */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('assets/seet.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #030303;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px 20px;
+  color: #041F28;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px);          /* Frosted glass blur */
+  -webkit-backdrop-filter: blur(10px);  /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+}
+
+/* ==================== HEADINGS ==================== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #041F28;
+}
+
+h2 {
+  color: #083B4D;
+  margin-top: 25px;
+}
+
+/* ==================== INPUTS & BUTTONS ==================== */
+input, select {
+  padding: 12px 15px;
+  width: 250px;
+  max-width: 100%;
+  margin: 10px 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #041F28;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #083B4D;
+  transform: scale(1.05);
+}
+
+/* ==================== GRID & SEAT CARDS ==================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-top: 25px;
+}
+
+.seet {
+  background-color: #041F28;
+  background-size: cover;
+  color: #ffffff;
+  width: 80px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  transition: 0.3s all;
+  position: relative;
+}
+
+.seet:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+}
+
+.seet.revealed {
+  background-color: grey;
+  background-size: cover;
+  cursor: default;
+  transform: scale(1.1);
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* ==================== RESULT AREA ==================== */
+#resultArea {
+  margin-top: 20px;
+  min-height: 40px;
+}
+
+#resultArea h3 {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #00a86b;
+  color: white;
+  font-size: 20px;
+  animation: bounce 0.8s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-30px); opacity: 0; }
+  50% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(0); }
+}
+
+/* ==================== MEMBER STATUS ==================== */
+.status p {
+  background: #E9F5F7;
+  color: #041F28;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-weight: 500;
+  font-size: 16px; /* Default for desktop */
+}
+
+/* ==================== ADMIN PAGE ==================== */
+.member-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.member-form input {
+  flex: 1 1 250px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.member-form button {
+  padding: 12px 20px;
+  background: #041F28;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.member-form button:hover {
+  background: #083B4D;
+  transform: scale(1.05);
+}
+
+/* ==================== MEMBER LIST ==================== */
+.member-list {
+  background: rgba(233, 245, 247, 0.9);
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.member-list h3 {
+  margin-bottom: 10px;
+  color: #083B4D;
+  font-size: 18px; /* Default for desktop */
+}
+
+.member-list p {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 5px 0;
+  font-size: 16px; /* Default for desktop */
+}
+
+/* ==================== NEXT BUTTON ==================== */
+.next-btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #041F28, #094C5E);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0B5C70, #107F95);
+}
+/* Seat reveal pop animation */
+.pop-animation {
+  animation: pop 0.5s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); background-color: #0C9; color: #fff; }
+  100% { transform: scale(1); background-color: #E9F5F7; }
+}
+
+/* Congrats message animation */
+.congrats {
+  animation: fadeInUp 1s ease;
+  color: #083B4D;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Mobile Devices (max-width: 600px) */
+@media (max-width: 480px) {
+  .status p {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .member-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .member-form input,
+  .member-form button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .member-list {
+    max-height: 250px;
+    padding: 12px;
+  }
+
+  .member-list h3 {
+    font-size: 16px;
+  }
+
+  .member-list p {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .next-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* Tablet Devices (max-width: 900px) */
+@media (max-width: 900px) {
+  .status p {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .member-form input,
+  .member-form button {
+    width: 70%;
+    font-size: 15px;
+    padding: 11px 14px;
+  }
+
+  .member-list h3 {
+    font-size: 17px;
+  }
+
+  .member-list p {
+    font-size: 15px;
+    padding: 9px 12px;
+  }
+
+  .next-btn {
+    width: 70%;
+    font-size: 15px;
+    padding: 11px 18px;
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+
+  input, select, button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+  }
+
+  .seet {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .next-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 12px;
+  }
+
+  .seet {
+    width: 75px;
+    height: 75px;
+    font-size: 22px;
+  }
+
+  input, select {
+    width: 70%;
+  }
+}
