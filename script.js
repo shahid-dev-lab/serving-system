@@ -94,7 +94,7 @@ async function setupSeetPage() {
     }
 
     // Create clickable seats **2–16 only**
-    for (let i = 2; i <= 15; i++) {
+    for (let i = 2; i <= 20; i++) {
       const div = document.createElement("div");
       div.className = "seet";
       div.innerText = "?";
@@ -112,7 +112,7 @@ async function setupSeetPage() {
 
         // Only available seats 2–16
         const available = [];
-        for (let n = 2; n <= 15; n++) {
+        for (let n = 2; n <= 20; n++) {
           if (!taken.includes(n)) available.push(n);
         }
 
@@ -190,4 +190,5 @@ async function setupSeetPage() {
     })();
   }
 }
+
 
